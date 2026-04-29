@@ -1,37 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details - LOGO</title>
-    <link rel="stylesheet" href="style.css"> <!-- Guna CSS yang sama atau baru -->
-    <style>
-        /* CSS ringkas untuk page ni saja */
-        .container { width: 80%; margin: 50px auto; font-family: sans-serif; }
-        .back-link { display: inline-block; margin-bottom: 20px; color: #f4c542; text-decoration: none; font-weight: bold; }
-        .project-img { width: 100%; border-radius: 15px; margin-bottom: 20px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Maintenance - Safwan</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .maintenance-container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .maintenance-icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite; /* Animasi di sini */
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .maintenance-container h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #f4c542; /* Guna warna kuning tema kau */
+    }
+
+    .maintenance-container p {
+      max-width: 400px;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    .btn-back {
+      padding: 12px 25px;
+      background: #f4c542;
+      color: #000;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-back:hover {
+      background: #f4c542;
+      transform: translateY(-3px);
+    }
+
+    /* Dark Mode Support */
+    body.dark .maintenance-container p {
+      color: #bbb;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Butang untuk patah balik ke portfolio utama -->
-        <a href="index.html" class="back-link">← Back to Portfolio</a>
+  <!-- Tetap masukkan Navbar supaya user boleh navigasi balik -->
+  <header class="navbar">
+     <a href="index.html" class="logo">SFWN</a>
+    <nav id="nav-menu" class="side-menu">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#projects" class="nav-link">Projects</a>
+      <span id="theme-toggle">🌙</span>
+    </nav>
+  </header>
 
-        <h1>Project Name: LOGO DESIGN</h1>
-        
-        <!-- Masukkan gambar hasil kerja kau -->
-        <img src="gambar-logo-kau.jpg" alt="Logo Project" class="project-img">
+  <main class="maintenance-container">
+    <div class="maintenance-icon">🛠️</div>
+    <h1>Under Maintenance</h1>
+    <p>I'm currently printing some awesome new designs. This section will be ready soon!</p>
+    <a href="index.html#projects" class="btn-back">Go Back Home</a>
+  </main>
 
-        <h3>Description</h3>
-        <p>Ini adalah projek design logo yang saya buat menggunakan Adobe Illustrator untuk klien dari syarikat XYZ.</p>
-
-        <h3>Tools Used</h3>
-        <ul>
-            <li>Adobe Illustrator</li>
-            <li>Adobe Photoshop</li>
-        </ul>
-    </div>
-
+  <script src="script.js" defer></script>
 </body>
 </html>
+

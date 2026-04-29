@@ -1,37 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details - LOGO</title>
-    <link rel="stylesheet" href="style.css"> <!-- Guna CSS yang sama atau baru -->
-    <style>
-        /* CSS ringkas untuk page ni saja */
-        .container { width: 80%; margin: 50px auto; font-family: sans-serif; }
-        .back-link { display: inline-block; margin-bottom: 20px; color: #f4c542; text-decoration: none; font-weight: bold; }
-        .project-img { width: 100%; border-radius: 15px; margin-bottom: 20px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details - Safwan</title>
+  <!-- WAJIB: Pastikan link CSS ni betul jalurnya -->
+  <head>
+  <!-- Panggil fail CSS luaran macam biasa -->
+  <link rel="stylesheet" href="style.css"> 
+
+  <!-- TAMBAH INI: Supaya skrin terus HITAM sebaik saja klik -->
+ 
+</head>
+
 </head>
 <body>
 
-    <div class="container">
-        <!-- Butang untuk patah balik ke portfolio utama -->
-        <a href="index.html" class="back-link">← Back to Portfolio</a>
+ <header class="navbar">
+  <a href="index.html" class="logo">SFWN</a>
 
-        <h1>Project Name: LOGO DESIGN</h1>
+  <!-- 1. Pastikan nav ada id ini -->
+  <nav id="nav-menu" class="side-menu">
+    <a href="index.html#home" class="nav-link">Home</a>
+    <a href="index.html#projects" class="nav-link">Projects</a>
+    <a href="https://wa.link" target="_blank" class="resume-btn">Contact →</a>
+    <span id="theme-toggle">🌙</span>
+  </nav>
+
+  <!-- 2. Pastikan butang hamburger ada id ini -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+</header>
+
+<!-- 3. WAJIB: Letak overlay ni di bawah header -->
+<div class="overlay" id="overlay"></div>
+
+
+  <!-- 2. CONTENT (Bungkus dalam container supaya ikut style index) -->
+  <!-- Bahagian Content Utama -->
+<main class="container project-detail">
+    
+
+    
+
+    <!-- GALLERY GRID -->
+ <div class="masonry-container">
+    <div class="gallery-item"><img src="BE1.jpg" alt="Logo 1"></div>
+    <div class="gallery-item"><img src="BE2.jpg" alt="Logo 2"></div>
+    <div class="gallery-item"><img src="BE3.jpg" alt="Logo 3"></div>
+    <div class="gallery-item"><img src="BE4.jpg" alt="Logo 4"></div>
+    <div class="gallery-item"><img src="BE5.jpg" alt="Logo 5"></div>
+    <!-- Tambah lagi gambar BE6, BE7 dan seterusnya -->
+</div>
+    <div class="details">
+       
+     
         
-        <!-- Masukkan gambar hasil kerja kau -->
-        <img src="gambar-logo-kau.jpg" alt="Logo Project" class="project-img">
-
-        <h3>Description</h3>
-        <p>Ini adalah projek design logo yang saya buat menggunakan Adobe Illustrator untuk klien dari syarikat XYZ.</p>
-
-        <h3>Tools Used</h3>
-        <ul>
-            <li>Adobe Illustrator</li>
-            <li>Adobe Photoshop</li>
-        </ul>
+            
+        </div>
     </div>
+    <a href="index.html#projects" class="back-link">← Back to Projects</a>
+</main>
+
+
+  <!-- 3. FOOTER (Copy terus dari index) -->
+  <footer class="footer">
+    <div class="footer-email">Safwan Portfolio</div>
+    <div class="footer-badge">BUILT WITH PURPOSE</div>
+    <div class="footer-copy">© 2026 Safwan. All rights reserved.</div>
+  </footer>
+
+  <!-- WAJIB: Panggil JS supaya Dark Mode & Menu berfungsi -->
+  <script src="script.js" defer></script>
+<!-- Lightbox dengan Butang Navigasi -->
+<div id="lightbox" class="lightbox">
+  <span class="close-btn">&times;</span>
+  <span class="prev-btn">&#10094;</span> <!-- Butang Kiri -->
+  <img class="lightbox-content" id="lightbox-img">
+  <span class="next-btn">&#10095;</span> <!-- Butang Kanan -->
+   <script src="script.js" defer></script>
+</div>
+
 
 </body>
 </html>
+
