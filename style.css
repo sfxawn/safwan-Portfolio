@@ -102,9 +102,22 @@ nav a {
 .avatar {
   width: 100px;
   height: 100px;
-  background: #f4c542;
+  background: none;
   border-radius: 50%;
   margin: 0 auto 20px;
+  display: block; 
+  overflow: visible; /* Supaya bila dia melompat sikit, tak kena potong */
+  animation: melayang 3s ease-in-out infinite;
+}
+
+/* Ini kod untuk pergerakan tu */
+@keyframes melayang {
+  0%, 100% {
+    transform: translateY(0); /* Posisi asal */
+  }
+  50% {
+    transform: translateY(-15px); /* Naik 15 pixel ke atas */
+  }
 }
 
 .hero h3 {
