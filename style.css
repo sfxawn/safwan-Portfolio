@@ -169,6 +169,7 @@ nav a {
 /* ========================= */
 /* PROJECTS */
 /* ========================= */
+
 .projects-section {
   padding: 80px 20px;
   background: #f5f5f5;
@@ -179,63 +180,67 @@ nav a {
   margin-bottom: 50px;
 }
 
-.tag {
-  display: none;
-  background: #f1f1f1;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 12px;
-  margin-bottom: 15px;
-}
-
-.projects-header h1 {
-  font-size: 60px;
-  font-weight: 800;
-}
-
-.projects-header p {
-  max-width: 500px;
-  margin: 10px auto;
-  color: #666;
-}
-
-/* GRID */
+/* GRID - Jarakkan sikit supaya bayangan tak bertindih */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 30px; 
   max-width: 1100px;
   margin: auto;
 }
 
-/* CARD */
+/* CARD - Di sini kita buat dia nampak "Unflatten" */
+/* Ganti bahagian .project-card kau dengan yang ni */
 .project-card {
-  height: 180px;
+  height: 140px; 
   border-radius: 15px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
-
   text-decoration: none;
-  transition: 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  
+  /* Sini yang silap tadi, sekarang sudah betul: */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  opacity: 0.8; 
+  transform: scale(0.95); 
+  position: relative;
+
+
 }
 
+/* Efek Hover (Bila mouse lalu) */
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Naik sikit */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* COLORS */
-.card1 { background: linear-gradient(135deg,#4e4b51,#c4c9d1); }
-.card2 { background: linear-gradient(135deg,#6a11cb,#2575fc); }
-.card3 { background: linear-gradient(135deg,#ff9a00,#ff2d55); }
-.card4 { background: linear-gradient(135deg,#00c6ff,#0072ff); }
-.card5 { background: linear-gradient(135deg,#ff416c,#ff4b2b); }
-.card6 { background: linear-gradient(135deg,#141e30,#243b55); }
+/* Efek "TEKAN MASUK" (Bila diklik) */
+.project-card:active {
+  transform: translateY(2px); /* Turun bawah sikit */
+  box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.3); /* Bayangan masuk dalam */
+}
+/* --- INI KOD BARU UNTUK AUTO-EXPAND (SCROLL) --- */
+.project-card.active-scroll {
+  transform: scale(1.08); /* Kad membesar sikit */
+  font-size: 22px;       /* Font membesar dari 18px ke 22px */
+  opacity: 1;            /* Terangkan balik kad ni */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+/* COLORS - Ganti warna gradient supaya nampak lebih dalam */
+.card1 { background: linear-gradient(145deg, #4e4b51, #2c2a2e); }
+.card2 { background: linear-gradient(145deg, #6a11cb, #2575fc); }
+.card3 { background: linear-gradient(145deg, #ff9a00, #ff2d55); }
+.card4 { background: linear-gradient(145deg, #00c6ff, #0072ff); }
+.card5 { background: linear-gradient(145deg, #ff416c, #ff4b2b); }
+.card6 { background: linear-gradient(145deg, #141e30, #243b55); }
 
 /* BUTTON */
 .projects-footer {

@@ -143,3 +143,27 @@ document.addEventListener('keydown', (e) => {
     if (e.key === "Escape") lightbox.style.display = 'none';
   }
 });
+// ==========================================
+// SCROLL SPY UNTUK PROJECT CARD (EXPAND EFFECT)
+// ==========================================
+const projectCards = document.querySelectorAll('.project-card');
+
+const projectObserverOptions = {
+  root: null,
+  threshold: 0.6, // 60% card nampak baru dia expand
+  rootMargin: "-10% 0px -10% 0px" // Fokus kat area tengah skrin
+};
+
+const projectObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active-scroll');
+    } else {
+      entry.target.classList.remove('active-scroll');
+    }
+  });
+}, projectObserverOptions);
+
+projectCards.forEach(card => {
+  projectObserver.observe(card);
+});
