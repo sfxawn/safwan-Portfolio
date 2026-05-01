@@ -227,10 +227,10 @@ nav a {
 }
 /* --- INI KOD BARU UNTUK AUTO-EXPAND (SCROLL) --- */
 .project-card.active-scroll {
-  transform: scale(1.08); /* Kad membesar sikit */
-  font-size: 22px;       /* Font membesar dari 18px ke 22px */
+  transform: scale(1.20); /* Kad membesar sikit */
+  font-size: 28x;       /* Font membesar dari 18px ke 22px */
   opacity: 1;            /* Terangkan balik kad ni */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
 
