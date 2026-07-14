@@ -3,84 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Under Maintenance - Safwan</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .maintenance-container {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
+  <title>Project Details - Safwan</title>
+  <!-- WAJIB: Pastikan link CSS ni betul jalurnya -->
+  <head>
+  <!-- Panggil fail CSS luaran macam biasa -->
+  <link rel="stylesheet" href="style.css"> 
 
-    .maintenance-icon {
-      font-size: 80px;
-      margin-bottom: 20px;
-      animation: pulse 2s infinite; /* Animasi di sini */
-    }
+  <!-- TAMBAH INI: Supaya skrin terus HITAM sebaik saja klik -->
+ 
+</head>
 
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.1); opacity: 0.7; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    .maintenance-container h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-      color: #f4c542; /* Guna warna kuning tema kau */
-    }
-
-    .maintenance-container p {
-      max-width: 400px;
-      color: #777;
-      margin-bottom: 30px;
-    }
-
-    .btn-back {
-      padding: 12px 25px;
-      background: #f4c542;
-      color: #000;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn-back:hover {
-      background: #f4c542;
-      transform: translateY(-3px);
-    }
-
-    /* Dark Mode Support */
-    body.dark .maintenance-container p {
-      color: #bbb;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Tetap masukkan Navbar supaya user boleh navigasi balik -->
-  <header class="navbar">
-     <a href="index.html" class="logo">SFWN</a>
-    <nav id="nav-menu" class="side-menu">
-      <a href="index.html#home" class="nav-link">Home</a>
-      <a href="index.html#projects" class="nav-link">Projects</a>
-      <span id="theme-toggle">🌙</span>
-    </nav>
-  </header>
+ <header class="navbar">
+  <a href="index.html" class="logo">SFWN</a>
 
-  <main class="maintenance-container">
-    <div class="maintenance-icon">🛠️</div>
-    <h1>Under Maintenance</h1>
-    <p>I'm currently printing some awesome new designs. This section will be ready soon!</p>
-    <a href="index.html#projects" class="btn-back">Go Back Home</a>
-  </main>
+  <!-- 1. Pastikan nav ada id ini -->
+  <nav id="nav-menu" class="side-menu">
+    <a href="index.html#home" class="nav-link">Home</a>
+    <a href="index.html#projects" class="nav-link">Projects</a>
+    <a href="https://wa.link" target="_blank" class="resume-btn">Contact →</a>
+    <span id="theme-toggle">🌙</span>
+  </nav>
 
+  <!-- 2. Pastikan butang hamburger ada id ini -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+</header>
+
+<!-- 3. WAJIB: Letak overlay ni di bawah header -->
+<div class="overlay" id="overlay"></div>
+
+
+  <!-- 2. CONTENT (Bungkus dalam container supaya ikut style index) -->
+  <!-- Bahagian Content Utama -->
+<main class="container project-detail">
+    
+
+    
+
+    <!-- GALLERY GRID -->
+   <!-- GALLERY MASONRY -->
+<div class="pinterest-grid">
+    <div class="gallery-item"><img src="photo1.jpeg" alt="Logo 1"></div>
+    <div class="gallery-item"><img src="photo2.jpeg" alt="Logo 1"></div>
+    <div class="gallery-item"><img src="photo3.jpeg" alt="Logo 1"></div>
+    <div class="gallery-item"><img src="photo4.jpeg" alt="Logo 1"></div>
+    <div class="gallery-item"><img src="photo5.jpeg" alt="Logo 1"></div>
+    <div class="gallery-item"><img src="photo6.jpeg" alt="Logo 1"></div>
+    <div class="gallery-item"><img src="photo7.jpeg" alt="Logo 1"></div>
+    <div class="gallery-item"><img src="photo8.jpeg" alt="Logo 1"></div>
+    
+    
+    
+
+    
+    <!-- Tambah lagi gambar BE6, BE7 dan seterusnya -->
+</div>
+
+        
+    </div>
+
+    <div class="details">
+       
+     
+        
+            
+        </div>
+    </div>
+    <a href="index.html#projects" class="back-link">← Back to Projects</a>
+</main>
+
+
+  <!-- 3. FOOTER (Copy terus dari index) -->
+  <footer class="footer">
+    <div class="footer-email">Safwan Portfolio</div>
+    <div class="footer-badge">BUILT WITH PURPOSE</div>
+    <div class="footer-copy">© 2026 Safwan. All rights reserved.</div>
+  </footer>
+
+  <!-- WAJIB: Panggil JS supaya Dark Mode & Menu berfungsi -->
   <script src="script.js" defer></script>
+<!-- Lightbox dengan Butang Navigasi -->
+<div id="lightbox" class="lightbox">
+  <span class="close-btn">&times;</span>
+  <span class="prev-btn">&#10094;</span> <!-- Butang Kiri -->
+  <img class="lightbox-content" id="lightbox-img">
+  <span class="next-btn">&#10095;</span> <!-- Butang Kanan -->
+   <script src="script.js" defer></script>
+</div>
+
+
 </body>
 </html>
-
